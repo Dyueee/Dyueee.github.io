@@ -1,0 +1,15 @@
+site_name: Dyueee Page
+
+nav: 
+  - 主页: index.md
+  - 文档:
+    - git操作指南: Tutorial/git操作指南.md
+    - mkdocs操作指南: Tutorial/mkdocs操作指南.md
+    # - C: Tutorial/C.md
+    # - Java: Tutorial/Java.md
+    # - Python: Tutorial/Python.md
+  - 关于我: about.md
+
+theme:
+  name: mkdocs
+  # name: readthedocs
