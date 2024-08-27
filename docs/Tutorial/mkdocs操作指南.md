@@ -18,4 +18,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
     git pull
     conda activate python38_env  (mkdocs install in python38_env)
-    mkdocs gh-deploy --config-file ../mypage/mkdocs.yml --remote-branch master
+    mkdocs gh-deploy --clean
+
+    python env：
+    conda install pymdown-extensions
