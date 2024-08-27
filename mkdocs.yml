@@ -11,10 +11,15 @@ nav:
   - 笔记: Tutorial/笔记.md
   - 关于: about.md
 
+# plugins:
+#   social:
+#     cards_layout_options:
+#       background_color: red             # Change background color
+#       background_image: null             # Remove background image
 
 theme:
   name: material # https://squidfunk.github.io/mkdocs-material/
-  icon:
+  logo: assets/logo.png
   repo: fontawesome/brands/github
   features:
     - content.code.copy # 代码复制
@@ -28,18 +33,17 @@ theme:
     scheme: slate # 夜间模式
     primary: blue grey # 主题色
     accent: orange # 侧边栏颜色
-
-  palette: 
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/lightbulb
-        name: Switch to dark mode
+  palette:
     # Palette toggle for dark mode
-    - scheme: slate
+    - scheme: default
       toggle:
         icon: material/lightbulb-outline
         name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
   font:
     text: Roboto # 正文字体
     code: Roboto Mono # 代码字体
