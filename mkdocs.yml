@@ -19,8 +19,9 @@ nav:
 
 theme:
   name: material # https://squidfunk.github.io/mkdocs-material/
-  logo: assets/logo.png
+  logo: assets/datadog.svg
   repo: fontawesome/brands/github
+  favicon: assets/datadog.svg
   features:
     - content.code.copy # 代码复制
     - content.code.annotate # 代码注释
@@ -30,20 +31,27 @@ theme:
     - search.suggest
     - search.highlight
   palette:
-    scheme: slate # 夜间模式
-    primary: blue grey # 主题色
-    accent: orange # 侧边栏颜色
-  palette:
     # Palette toggle for dark mode
     - scheme: default
       toggle:
         icon: material/lightbulb-outline
         name: Switch to light mode
+      primary:  grey # 主题色
+      accent: orange # 侧边栏颜色
     # Palette toggle for light mode
     - scheme: slate
       toggle:
         icon: material/lightbulb
         name: Switch to dark mode
+      primary: blue grey # 主题色
+      accent: orange # 侧边栏颜色
+
+  # palette:
+  #   scheme: slate # 夜间模式
+  #   primary:  grey # 主题色
+  #   accent: orange # 侧边栏颜色
+
+
   font:
     text: Roboto # 正文字体
     code: Roboto Mono # 代码字体
