@@ -1,0 +1,16 @@
+
+
+.background-image {  
+    position: fixed; /* 或者使用 absolute，取决于您是否需要背景随页面滚动 */  
+    top: 0;  
+    left: 0;  
+    width: 100%; /* 或者您想要的具体宽度 */  
+    height: 100vh; /* 视口高度的100%，使背景覆盖整个视口 */  
+    background-image: url('assets/back.png');  
+    background-repeat: no-repeat; /* 防止背景图像重复 */  
+    background-position: left top; /* 确保背景图像位于左上角 */  
+    background-size: cover; /* 或者 cover, contain 等，取决于您想要的图像尺寸 */  
+    opacity: 0.5; /* 设置背景图像的透明度 */  
+    z-index: -1; /* 确保背景图像位于内容之下 */  
+    /* 如果您不希望背景图像影响子元素的透明度，可以考虑使用伪元素 */  
+}  
