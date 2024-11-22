@@ -8,6 +8,7 @@ nav:
   - 文档:
     - git操作指南: Tutorial/git操作指南.md
     - mkdocs操作指南: Tutorial/mkdocs操作指南.md
+    - yaml-cpp交叉编译: Tutorial/yaml-cpp交叉编译.md
   - 笔记: Tutorial/笔记.md
   - 关于: about.md
 
