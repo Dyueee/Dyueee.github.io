@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1" class="md-skip">
           Skip to content
         </a>
       
@@ -458,8 +458,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    yaml-cpp交叉编译
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -470,6 +479,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.下载解压
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2toolchaincmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.创建toolchain.cmake
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3cmakeliststxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.修改CMakeLists.txt文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.编译
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5cmake_install_prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.CMAKE_INSTALL_PREFIX安装目录下生成头文件和库文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.使用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -540,8 +620,68 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.下载解压
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2toolchaincmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.创建toolchain.cmake
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3cmakeliststxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.修改CMakeLists.txt文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.编译
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5cmake_install_prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.CMAKE_INSTALL_PREFIX安装目录下生成头文件和库文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.使用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -559,36 +699,51 @@
   
 
 
-<p>1.下载https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.0.zip，解压
-2.创建toolchain.cmake，内容：</p>
-<h1 id="_1">指定目标系统</h1>
-<p>set(CMAKE_SYSTEM_NAME Linux)</p>
-<h1 id="_2">指定目标平台</h1>
-<h1 id="setcmake_system_processor-arm">set(CMAKE_SYSTEM_PROCESSOR arm)</h1>
-<h1 id="_3">指定安装目录</h1>
-<p>set(CMAKE_INSTALL_PREFIX /home/xxx/)</p>
-<h1 id="_4">指定交叉编译工具链的根路径</h1>
-<p>set(CROSS_CHAIN_PATH /home/xxx/tool)
-set(CMAKE_C_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-gcc)
-set(CMAKE_CXX_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-g++)</p>
-<p>3.修改CMakeLists.txt文件，注释以下内容，加快编译速度</p>
-<h1 id="enable_testing">enable_testing()</h1>
-<h1 id="optionyaml_cpp_build_tests-enable-testing-on">option(YAML_CPP_BUILD_TESTS "Enable testing" ON)</h1>
-<h1 id="optionyaml_cpp_build_tools-enable-parse-tools-on">option(YAML_CPP_BUILD_TOOLS "Enable parse tools" ON)</h1>
-<h1 id="optionyaml_cpp_build_contrib-enable-contrib-stuff-in-library-on">option(YAML_CPP_BUILD_CONTRIB "Enable contrib stuff in library" ON)</h1>
-<p>4.编译
-mkdir build
+  <h1>yaml-cpp交叉编译</h1>
+
+<h2 id="1">1.下载解压</h2>
+<p>地址：https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.0.zip</p>
+<h2 id="2toolchaincmake">2.创建toolchain.cmake</h2>
+<pre><code>    set(CMAKE_SYSTEM_NAME Generic)  
+    # 指定目标系统
+    set(CMAKE_SYSTEM_NAME Linux)
+    # 指定目标平台
+    #set(CMAKE_SYSTEM_PROCESSOR arm)
+
+    # 指定安装目录
+    set(CMAKE_INSTALL_PREFIX /home/xxx/)
+
+    # 指定交叉编译工具链的根路径
+    set(CROSS_CHAIN_PATH /home/xxx/tool)
+    set(CMAKE_C_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-gcc)
+    set(CMAKE_CXX_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-g++)
+</code></pre>
+<h2 id="3cmakeliststxt">3.修改CMakeLists.txt文件</h2>
+<pre><code>#注释以下内容，加快编译速度
+#enable_testing()
+
+#option(YAML_CPP_BUILD_TESTS "Enable testing" ON)
+#option(YAML_CPP_BUILD_TOOLS "Enable parse tools" ON)
+#option(YAML_CPP_BUILD_CONTRIB "Enable contrib stuff in library" ON)
+</code></pre>
+<h2 id="4">4.编译</h2>
+<pre><code>mkdir build
 cd build
 cmake ..
 sudo make
-sudo make install</p>
-<p>5.安装目录下生成头文件和库文件</p>
-<p>6.使用
-include_directories(<span PROJECT_NAME="PROJECT_NAME" class="arithmatex">\({CMAKE_CURRENT_SOURCE_DIR}/xxx)
-target_link_libraries(\)</span>/xxx/yaml-cpp/libyaml-cpp.a)} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR</p>
-<h1 id="include">include <yaml-cpp/yaml.h></h1>
-<p>YAML::Node fconfig = YAML::LoadFile("/config/Cfg.yaml");
-double fcfg_th = fconfig["th"].as<double>();</p>
+</code></pre>
+<h2 id="5cmake_install_prefix">5.CMAKE_INSTALL_PREFIX安装目录下生成头文件和库文件</h2>
+<pre><code>sudo make install
+</code></pre>
+<h2 id="6">6.使用</h2>
+<pre><code>include_directories(${CMAKE_CURRENT_SOURCE_DIR}/xxx)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/xxx/yaml-cpp/libyaml-cpp.a)
+
+code:
+#include &lt;yaml-cpp/yaml.h&gt;
+YAML::Node fconfig = YAML::LoadFile("/config/Cfg.yaml");
+double fcfg_th = fconfig["th"].as&lt;double&gt;();
+</code></pre>
 
 
 
