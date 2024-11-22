@@ -31,6 +31,12 @@ theme:
     - navigation.top 
     - search.suggest
     - search.highlight
+    - navigation.tabs
+    - navigation.tabs.sticky #
+    # - navigation.sections
+    # - navigation.path
+    # - header.autohide
+
   palette:
     # Palette toggle for dark mode
     - scheme: default
@@ -46,6 +52,8 @@ theme:
         name: Switch to dark mode
       primary: blue grey # 主题色
       accent: orange # 侧边栏颜色
+extra:
+  generator: false #去掉底部“Made with Material for MkDocs”
 
   # palette:
   #   scheme: slate # 夜间模式

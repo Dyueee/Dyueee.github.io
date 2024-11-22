@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 # Welcome to Dyueee's Page
 <!-- ![balabal](assets/logo.png) -->
 [去Dyueee个人主页!](./about.md)
