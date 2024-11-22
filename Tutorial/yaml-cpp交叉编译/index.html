@@ -702,21 +702,22 @@
   <h1>yaml-cpp交叉编译</h1>
 
 <h2 id="1">1.下载解压</h2>
-<p>地址：https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.0.zip</p>
+<pre><code>地址：https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.0.zip
+</code></pre>
 <h2 id="2toolchaincmake">2.创建toolchain.cmake</h2>
-<pre><code>    set(CMAKE_SYSTEM_NAME Generic)  
-    # 指定目标系统
-    set(CMAKE_SYSTEM_NAME Linux)
-    # 指定目标平台
-    #set(CMAKE_SYSTEM_PROCESSOR arm)
+<pre><code>set(CMAKE_SYSTEM_NAME Generic)  
+# 指定目标系统
+set(CMAKE_SYSTEM_NAME Linux)
+# 指定目标平台
+#set(CMAKE_SYSTEM_PROCESSOR arm)
 
-    # 指定安装目录
-    set(CMAKE_INSTALL_PREFIX /home/xxx/)
+# 指定安装目录
+set(CMAKE_INSTALL_PREFIX /home/xxx/)
 
-    # 指定交叉编译工具链的根路径
-    set(CROSS_CHAIN_PATH /home/xxx/tool)
-    set(CMAKE_C_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-gcc)
-    set(CMAKE_CXX_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-g++)
+# 指定交叉编译工具链的根路径
+set(CROSS_CHAIN_PATH /home/xxx/tool)
+set(CMAKE_C_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-gcc)
+set(CMAKE_CXX_COMPILER ${CROSS_CHAIN_PATH}/bin/linux-gnu-g++)
 </code></pre>
 <h2 id="3cmakeliststxt">3.修改CMakeLists.txt文件</h2>
 <pre><code>#注释以下内容，加快编译速度
